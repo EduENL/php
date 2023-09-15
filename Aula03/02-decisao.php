@@ -72,6 +72,15 @@
 
     <!-- Criar aqui seu programa PHP -->
     
+    <?php
+        $a = 5;
+
+        if ($a > 1) {
+            echo "True. O número é maior que 1 (simples - caso 1).";
+        }
+            echo "<br>";
+        if ($a > 1) echo "True. O número é maior que 1 (simples - caso 2)";
+    ?>
     
     <hr>
     
@@ -122,7 +131,21 @@
 
     <!-- Criar aqui seu programa PHP -->
 
-    
+    <?php
+        $produto = 'Ultrabook ASUS';
+        $estoque_atual = 0;
+        $estoque_min = 14;
+
+        echo "<h3>$produto</h3>";
+
+        if ($estoque_atual < $estoque_min) {
+            echo "<span class=repor>É necessário comprar.</span>";
+            echo "<br>";
+            echo "<mark>URGENTE</mark>";
+        } else { 
+            echo "<span class=ok>Estoque OK!</span>";
+        }
+    ?>
     <hr>
 
     <!-- ___________________________________________________________________ -->
@@ -168,7 +191,23 @@
     <hr>
     
     <!-- Criar aqui seu programa PHP -->
-    
+    <?php
+        // 1-Esfiha
+        // 2-Pastel
+        // 3-Pizza
+
+        $opção = 1;
+
+        if ($opção == 1) {
+            echo "<p>A opção escolhida é uma esfira!</p>";
+        } elseif ($opção == 2) {
+            echo "<p>A opção escolhida é um pastel!</p>";
+        } elseif ($opcao == 3) {
+            echo "<p>A opção escolhida é uma pizza!</p>";
+        } else {
+            echo "Opção inválida escolhida!";
+        }
+    ?>
     <hr>
 
     <!-- ___________________________________________________________________ -->
@@ -202,7 +241,18 @@
     <hr>
 
     <!-- Criar aqui seu programa PHP -->
-    
+    <?php
+        // 1-Esfiha
+        // 2-Pastel
+        // 3-Pizza
+        
+        switch ($opção) { 
+            case 1: echo "<p>A opção escolhida é uma esfira!</p>"; break;
+            case 2: echo "<p>A opção escolhida é uma pastel!</p>"; break;
+            case 3: echo "<p>A opção escolhida é uma pizza!</p>"; break;
+            default: echo "Opção inválida escolhida!"; break;
+        }
+    ?>
     
     <!-- Rodapé -->
     <div class="container">
